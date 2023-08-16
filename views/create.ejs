@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+
+<body>
+    
+    <%- include('./partials/nav.ejs') %>
+    
+
+    <div class="create-blog content">
+        <form action="/blogs" method="POST">
+            <!-- post the data to blogs -->
+            <label for="title">Blog title:</label>
+            <input type="text" id="title" name="title" required>
+            <label for="snippet">Blog snippet:</label>
+            <input type="text" id="snippet" name="snippet" required>
+            <label for="body">Blog body:</label>
+            <textarea id="body" name="body" required></textarea>
+            <!-- very imp to specify name for post requests -->
+            <button>Submit</button>
+        </form>
+    </div>
+    <%- include('./partials/footer.ejs') %>
+
+</body>
+</html>
